@@ -1,6 +1,5 @@
-import com.company.Entity.Person;
-import com.company.Service.PersonService;
-
+import Entity.Person;
+import Service.PersonService;
 
 public class Main {
 
@@ -8,6 +7,9 @@ public class Main {
 	// write your code here
         Person person=new Person();
         PersonService personServic=new PersonService();
-        personServic.fillEntityByCommandLinaArgs(person,args);
+        personServic.fillEntityByCommandLineArgs(person,new String[]{"1","2"});
+
+
+        personServic.fillEntityFromCommandLine(person);
     }
 }
