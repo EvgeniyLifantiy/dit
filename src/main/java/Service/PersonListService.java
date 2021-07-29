@@ -2,10 +2,7 @@ package Service;
 
 import Entity.Person;
 
-import java.util.List;
-import java.util.Scanner;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * @author Евгений
@@ -29,11 +26,15 @@ public class PersonListService {
     }
 
     public List fillAndSortListFromCommandLine(List<Person> personList){
-        SortedSet sortedSet= new TreeSet();
+        SortedSet sortedSet= new TreeSet(new Comparator<Person>() {
+            @Override
+            public int compare(Person o1, Person o2) {
+                return o1.getLastName().compareTo(o2.getLastName());
+            }
+        });
         while(true){
             Person person=new Person(scanner.next(),scanner.next());
             sortedSet.add(person);
-            personList.add(person);
             System.out.println(person);
             System.out.println("Do you want continue adding?");
             if(!scanner.next().equals("Yes")){
