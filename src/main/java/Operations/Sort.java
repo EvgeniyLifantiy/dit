@@ -3,6 +3,7 @@ package Operations;
 import Entity.Person;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author Евгений
@@ -12,6 +13,6 @@ public class Sort implements Operation{
     @Override
     public List execute(List<Person> personList) {
         System.out.println("Sort was selected");
-        return null;
+        return personList.stream().sorted().collect(Collectors.toList());
     }
 }

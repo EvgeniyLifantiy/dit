@@ -1,5 +1,19 @@
-package Operations;/**
- * @project dit
+package Operations;
+
+import Entity.Person;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
  * @author Евгений
- */public class Clear {
+ * @project dit
+ */
+public class Clear implements Operation {
+
+    @Override
+    public List execute(List<Person> personList) {
+        personList.clear();
+        return personList;
+    }
 }

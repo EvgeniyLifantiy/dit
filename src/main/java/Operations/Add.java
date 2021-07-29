@@ -24,6 +24,6 @@ public class Add implements Operation{
                 System.out.println("Added successful");
                 return personList;
             }
-        }t
+        }
     }
 }
