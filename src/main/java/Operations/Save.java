@@ -17,7 +17,7 @@ import java.util.List;
 public class Save implements Operation{
 
     @Override
-    public List execute(List<Person> personList) {
+    public List<Person>  execute(List<Person> personList) {
         System.out.println("Save was selected");
         try ( Writer writer=new FileWriter(new File("src/main/resources/file.txt"))){
             for (Person p:personList) {

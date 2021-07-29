@@ -17,7 +17,7 @@ public class Read implements Operation{
 
 
     @Override
-    public List execute(List<Person> personList) {
+    public List<Person>  execute(List<Person> personList) {
         try ( Scanner scanner = new Scanner(Paths.get("src/main/resources/file.txt"))){
 
             while (scanner.hasNextLine()) {

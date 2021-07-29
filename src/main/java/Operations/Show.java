@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class Show implements Operation{
     @Override
-    public List execute(List<Person> personList) {
+    public List<Person>  execute(List<Person> personList) {
         System.out.println("Show was selected");
         return personList;
     }

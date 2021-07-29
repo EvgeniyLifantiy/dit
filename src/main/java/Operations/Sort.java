@@ -2,6 +2,7 @@ package Operations;
 
 import Entity.Person;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -11,8 +12,8 @@ import java.util.stream.Collectors;
  */
 public class Sort implements Operation{
     @Override
-    public List execute(List<Person> personList) {
+    public List<Person> execute(List<Person> personList) {
         System.out.println("Sort was selected");
-        return personList.stream().sorted().collect(Collectors.toList());
+        return personList.stream().sorted(Comparator.comparing(Person::getLastName)).collect(Collectors.toList());
     }
 }

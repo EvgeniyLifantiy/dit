@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Add implements Operation{
     Scanner scanner=new Scanner(System.in);
     @Override
-    public List execute(List<Person> personList) {
+    public List<Person>  execute(List<Person> personList) {
         System.out.println("Add was selected");
         while(true){
             Person person=new Person(scanner.next(),scanner.next());

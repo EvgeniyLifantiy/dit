@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class Exit implements Operation{
     @Override
-    public List execute(List<Person> personList) {
+    public List<Person>  execute(List<Person> personList) {
         System.out.println("Exit was selected");
         System.exit(0);
         return null;

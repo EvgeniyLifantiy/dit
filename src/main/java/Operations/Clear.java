@@ -12,7 +12,7 @@ import java.util.List;
 public class Clear implements Operation {
 
     @Override
-    public List execute(List<Person> personList) {
+    public List<Person>  execute(List<Person> personList) {
         personList.clear();
         return personList;
     }
